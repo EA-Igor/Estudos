@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="igord"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-05-21 01:59:54 "/>
+        <attribute name="created" value="aWdvcmQ7REVTS1RPUC1SUDcySktKOzIwMjMtMDUtMjA7IjEwOjMxOjE1ICI7Mjc4Ng=="/>
+        <attribute name="edited" value="aWdvcmQ7REVTS1RPUC1SUDcySktKOzIwMjMtMDUtMjE7IjAxOjU5OjU0ICI7NTsyOTEy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="decimal, remainder" type="Integer" array="False" size=""/>
+            <declare name="binary" type="String" array="False" size=""/>
+            <output expression="&quot;Programa criado com a finalidade de converter um n&#250;mero decimal para um n&#250;mero bin&#225;rio utilizando o resto de divis&#245;es curtas por 2.&quot;" newline="True"/>
+            <output expression="&quot;Digite um n&#250;mero decimal: &quot;" newline="True"/>
+            <input variable="decimal"/>
+            <assign variable="binary" expression="&quot;&quot;"/>
+            <while expression="decimal&gt;0">
+                <assign variable="remainder" expression="decimal%2"/>
+                <assign variable="decimal" expression="decimal/2"/>
+                <assign variable="binary" expression="ToString(remainder) &amp; binary"/>
+            </while>
+            <output expression="&quot;O n&#250;mero em bin&#225;rio &#233;: &quot; &amp;  binary" newline="False"/>
+        </body>
+    </function>
+</flowgorithm>
